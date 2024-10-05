@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #360369; /* Purple background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* This centers the title vertically */
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center; /* Center the h1 horizontally */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change to pointer for buttons */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+#mapContainer {
+    margin-bottom: 20px;
+}
+
+iframe {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: none;
+    display: block;
+}
+
+#weather {
+    width: 100%; /* Make the weather container stretch the full width */
+    padding: 20px;
+    text-align: left;
+}
+
+#weather h3 {
+    color: #360369; /* Purple text to match the theme */
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Flex container for weather details */
+#weatherDetails {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Wrap if there are too many items */
+}
+
+.weather-detail {
+    background-color: #360369; /* Dark purple background */
+    color: white; /* White text */
+    padding: 10px;
+    margin-right: 15px; /* Space between weather details */
+    margin-bottom: 15px; /* Space below each detail */
+    border-radius: 5px;
+    min-width: 150px; /* Minimum width for each detail box */
+    text-align: center; /* Center text inside each box */
+}
+
+/* Style for the welcome header */
+.welcome-header {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Style for the location header */
+.location-header {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Flex container for latitude and longitude */
+.lat-lon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Style for individual latitude and longitude boxes */
+.lat-lon {
+    background-color: #270846;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: default; /* Set to default as these are not interactive */
+    border-radius: 5px;
+}
