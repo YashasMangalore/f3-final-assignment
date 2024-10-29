@@ -85,8 +85,8 @@ function displayMap(lat, lon) {
   mapFrame.style.border = "0";
   mapFrame.allowFullscreen = true;
   mapFrame.loading = "lazy";
-  mapFrame.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyCvA3Sc1nfC6zR4e3rD6zeAbdE4mjAi7-Q&q=${lat},${lon}&zoom=12&maptype=roadmap`;
-
+  const googleMapsApiKey = "YOUR_GOOGLE_MAPS_API_KEY"; // Use a config file or environment variable instead
+  mapFrame.src = `https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${lat},${lon}&zoom=12&maptype=roadmap`;
   // Clear previous map (if any) and append the new one
   mapContainer.innerHTML = ""; // Clear previous content
   mapContainer.appendChild(mapFrame); // Append the new map frame
@@ -94,8 +94,8 @@ function displayMap(lat, lon) {
 
 // Function to fetch weather data from OpenWeatherMap API
 function fetchWeatherData(lat, lon) {
-  const apiKey = "5cf4650e769cf4383f5298ec5beb20c5"; // Your OpenWeatherMap API key
-  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  const openWeatherApiKey = config.openWeatherApiKey; // Your OpenWeatherMap API key create your own config file and add your your key
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${openWeatherApiKey}&units=metric`;
 
   fetch(apiUrl)
     .then((response) => {
